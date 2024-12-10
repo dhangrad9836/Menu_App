@@ -47,7 +47,6 @@ for(int i = 0; i < maxPets; i++)
         animalNickname = "Puss";
             break;
 
-
         case 3:
         animalSpecies = "cat";
         animalID = "c4";
@@ -57,8 +56,7 @@ for(int i = 0; i < maxPets; i++)
         animalNickname = "";
             break;
 
-        default:
-    
+        default:    
         animalSpecies = "";
         animalID = "";
         animalAge = "";
@@ -112,17 +110,29 @@ if (readResult != null)
     //pause code execution
     //readResult = Console.ReadLine();
 
+    /*
+     * You know each of the following items:
+
+The first dimension of the ourAnimals array corresponds to the different pets.
+The second dimension of the ourAnimals array corresponds to the characteristics of each pet.
+The if statement prevents the inner loop from running when there's no pet data assigned to the current pet.
+The inner loop completes all of its iterations for each iteration of the outer loop.
+Therefore, you know that each animal's characteristics will be displayed as intended.
+     */
+
     switch (menuSelection)
     {
         case "1":
-            //List all of our current pet information
+            //List all of our current pet information..maxPets already assigned a value
             for (int i = 0; i < maxPets; i++)
             {
                 if (ourAnimals[i, 0] != "ID #: ")
                 {
                     Console.WriteLine();
+                    //this will loop through each of the pets data
                     for(int j = 0; j < 6; j++)
                     {
+                        //this displays the pet info on a seperate lines
                         Console.WriteLine(ourAnimals[i, j]);
                     }
                 }
